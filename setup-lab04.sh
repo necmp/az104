@@ -2,7 +2,7 @@
 
 # 開始メッセージ
 echo;
-printf "\e[33;1m ----- NECMP AZ104 Training / Lab4 Setup ----- \e[m"
+printf "\e[33;1m----- NECMP AZ104 Training / Lab4 Setup -----\e[m"
 echo;
 echo;
 echo -n "あなたの <受講者番号> を入力してください = "
@@ -13,7 +13,7 @@ echo -n "セットアップを開始してよろしいですか？(y/n) = "
 read yesno
 case "$yesno" in [yY]*) ;; *) echo "終了します" ; exit ;; esac
 
-#仮想マシンの作成
+# 仮想マシンの作成
 echo;
 echo "仮想マシン" Web$num-A "を作成します..."
 echo;
@@ -30,6 +30,6 @@ az vm create \
     --output table
 
 # 終了メッセージ
-echo ""
+echo;
 echo "セットアップが完了しました"
-echo ""
+echo;
