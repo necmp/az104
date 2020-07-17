@@ -1,0 +1,4 @@
+#cloud-config
+packages: nginx
+runcmd: service nginx restart
+runcmd: cat /usr/share/nginx/html/index.html | tr nginx! nginx!(MyWeb00-A) > /usr/share/nginx/html/index.html
