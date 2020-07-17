@@ -15,6 +15,7 @@ case "$yesno" in [yY]*) ;; *) echo "終了します" ; exit ;; esac
 #仮想マシンの作成
 echo ""
 echo "仮想マシン" Web$num-A "を作成します..."
+echo ""
 az vm create \
     --resource-group RG$num \
     --name Web$num-A \
