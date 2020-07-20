@@ -1,3 +1,7 @@
 #cloud-config
-packages: nginx
-runcmd: service nginx restart
+packages: 
+  - nginx
+  - traceroute
+runcmd: 
+  - service nginx restart
+  - sed -i s/'nginx!'/'nginx! (A)'/g /var/www/html/index.nginx-debian.html

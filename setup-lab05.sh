@@ -12,13 +12,12 @@ echo "あなたが入力した <受講者番号> は" $num "です"
 echo -n "セットアップを開始してよろしいですか？(y/n) = "
 read yesno
 case "$yesno" in [yY]*) ;; *) echo "終了します" ; exit ;; esac
+echo;
 
 # 仮想ネットワークの作成
-echo;
-echo "仮想ネットワーク" VNet$num-B "を作成します..."
-echo;
+echo "仮想ネットワーク" VNet$num-Sub "を作成します..."
 az network vnet create \
-  --name VNet$num-B \
+  --name VNet$num-Sub \
   --resource-group RG$num \
   --address-prefixes 20.0.0.0/16 \
   --subnet-name Frontend \
@@ -26,17 +25,15 @@ az network vnet create \
   --output table
 
 # 仮想マシンの作成
-echo;
-echo "仮想マシン" VM$num-B "を作成します..."
-echo;
+echo "仮想マシン" Sub$num "を作成します..."
 az vm create \
     --resource-group RG$num \
-    --name VM$num-B \
+    --name Sub$num \
     --image UbuntuLTS \
     --size Standard_B1ms \
     --admin-username admin$num \
     --admin-password 'Pa$$w0rd1234' \
-    --vnet-name VNet$num-B \
+    --vnet-name VNet$num-Sub \
     --subnet Frontend \
     --output table
 
