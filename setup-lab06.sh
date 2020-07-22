@@ -38,7 +38,7 @@ az vm create \
     --admin-password 'Pa$$w0rd1234' \
     --vnet-name VNet$num \
     --subnet DMZ \
-    --custom-data cloud-init06-nva.txt \
+    --custom-data ./clouddrive/az104/cloud-init06-nva.txt \
     --output table
 
 # 仮想マシンの作成
@@ -53,7 +53,7 @@ az vm create \
     --admin-password 'Pa$$w0rd1234' \
     --vnet-name VNet$num \
     --subnet Frontend \
-    --custom-data cloud-init06-web.txt \
+    --custom-data ./clouddrive/az104/cloud-init06-web.txt \
     --output table
 
 # NSGの受信ポートのオープン

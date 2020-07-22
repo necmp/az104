@@ -35,7 +35,7 @@ az vm create \
     --admin-password 'Pa$$w0rd1234' \
     --vnet-name VNet$num \
     --subnet Frontend \
-    --custom-data cloud-init04.txt \
+    --custom-data ./clouddrive/az104/cloud-init04.txt \
     --output table
 
 # 終了メッセージ
