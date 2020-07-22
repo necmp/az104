@@ -57,7 +57,7 @@ az vm create \
     --output table
 
 # NSGの受信ポートのオープン
-echo "仮想マシン" Web$num-B "を受信ポート 80 をオープンします..."
+echo "仮想マシン" Web$num-B "の受信ポート 80 をオープンします..."
     az vm open-port \
         --resource-group RG$num \
         --name Web$num-B \
