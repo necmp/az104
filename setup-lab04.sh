@@ -28,7 +28,7 @@ echo "仮想マシン" Web$num-A "を作成します..."
 az vm create \
     --resource-group RG$num \
     --name Web$num-A \
-    --image UbuntuLTS \
+    --image Ubuntu2204 \
     --availability-set HA$num \
     --size Standard_B1ms \
     --admin-username admin$num \

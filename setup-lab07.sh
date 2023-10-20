@@ -36,7 +36,7 @@ echo "仮想マシン" Client$num "を作成します..."
 az vm create \
     --resource-group RG$num \
     --name Client$num \
-    --image UbuntuLTS \
+    --image Ubuntu2204 \
     --size Standard_B1ms \
     --admin-username admin$num \
     --admin-password 'Pa$$w0rd1234' \

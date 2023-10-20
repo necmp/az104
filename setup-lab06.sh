@@ -19,7 +19,7 @@ echo "仮想マシン" DB$num "を作成します..."
 az vm create \
     --resource-group RG$num \
     --name DB$num \
-    --image UbuntuLTS \
+    --image Ubuntu2204 \
     --size Standard_B1ms \
     --admin-username admin$num \
     --admin-password 'Pa$$w0rd1234' \
@@ -32,7 +32,7 @@ echo "仮想マシン" NVA$num "を作成します..."
 az vm create \
     --resource-group RG$num \
     --name NVA$num \
-    --image UbuntuLTS \
+    --image Ubuntu2204 \
     --size Standard_B1ms \
     --admin-username admin$num \
     --admin-password 'Pa$$w0rd1234' \
@@ -46,7 +46,7 @@ echo "仮想マシン" Web$num-B "を作成します..."
 az vm create \
     --resource-group RG$num \
     --name Web$num-B \
-    --image UbuntuLTS \
+    --image Ubuntu2204 \
     --size Standard_B1ms \
     --availability-set HA$num \
     --admin-username admin$num \
