@@ -2,7 +2,7 @@
 
 # 開始メッセージ
 echo;
-printf "\e[33;1m----- NECMP AZ104 Training / Lab06 Setup -----\e[m"
+printf "\e[33;1m----- NECMP AZ104 Training / Lab05B Setup -----\e[m"
 echo;
 echo;
 echo -n "あなたの <受講者番号> を入力してください = "
@@ -38,7 +38,7 @@ az vm create \
     --admin-password 'Pa$$w0rd1234' \
     --vnet-name VNet$num \
     --subnet DMZ \
-    --custom-data ./clouddrive/az104/cloud-init06-nva.txt \
+    --custom-data ./clouddrive/az104/cloud-init05-nva.txt \
     --output table
 
 # 仮想マシンの作成
@@ -53,7 +53,7 @@ az vm create \
     --admin-password 'Pa$$w0rd1234' \
     --vnet-name VNet$num \
     --subnet Frontend \
-    --custom-data ./clouddrive/az104/cloud-init06-web.txt \
+    --custom-data ./clouddrive/az104/cloud-init05-web.txt \
     --output table
 
 # NSGの受信ポートのオープン
